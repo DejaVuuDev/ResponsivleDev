@@ -1,0 +1,57 @@
+
+:root{
+    --lightModeBgColor: #e6e7e8;
+    --lightModeTxtColor: #1c1c1c;
+    background-color: var(--lightModeBgColor);
+    color: var(--lightModeTxtColor);
+    font-family: "dejaVuSansMono", monospace;
+}
+body{
+    margin: 0;
+    padding: .5rem;
+}
+.bold{
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}
+.italicBold{
+    font-style: italic;
+    font-weight: bold;
+}
+a.italicBold{
+    color: #063C60;
+}
+a.italicBold:visited{
+    color: #4907AB;
+}
+a.italicBold:hover{
+    text-decoration: none;
+}
+
+header{
+    border-bottom: 1px solid #514806;
+    text-align: right;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --lightModeBgColor: #1c1c1c;
+        --lightModeTxtColor: #e6e7e8;
+        --darkModeprimaryColor: #e4d00a;
+        background-color: var(--lightModeBgColor);
+        color: var(--lightModeTxtColor);
+    }
+    a.italicBold{
+        color: var(--darkModeprimaryColor);
+    }
+    a.italicBold:visited{
+        color: #BD94F9;
+    }
+    header{
+        color: var(--darkModeprimaryColor);
+        border-bottom: 1px solid var(--darkModeprimaryColor);
+        text-align: right;
+    }
+}
