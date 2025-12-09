@@ -2,8 +2,7 @@
     height: 100%;
     --lightModeBgColor: #e6e7e8;
     --lightModeTxtColor: #1c1c1c;
-    /* --lightModePrimaryColor: #4907AB; */
-    --lightModePrimaryColor: #063C60;
+    --lightModePrimaryColor: #4907AB;
     background-color: var(--lightModeBgColor);
     color: var(--lightModeTxtColor);
     font-family: "dejaVuSansMono", monospace;
