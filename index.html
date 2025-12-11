@@ -5,11 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/fonts/fonts.css">
+    <link rel="stylesheet" href="/styles/comingSoon.css">
+    <script src="src/js/main.js"></script>
     <title>Responsivle Dev</title>
 </head>
 <body>
-    <div id="comingSoon">
-        <h1><span>Responsivle Dev</span> is a 100% human hand coded blog. <br> Coming soon...</h1>
-    </div>
+    <header>
+        <picture>
+            <source srcset="src/media/logoPlaceholderDark.svg" media="(prefers-color-scheme: dark)" />
+            <source srcset="src/media/logoPlaceholderLight.svg" media="(prefers-color-scheme: light)" />
+            <img src="src/media/logoPlaceholderLight.svg" alt="A placeholder for my logo">
+        </picture>
+        <div class="menuContainer" onclick="navMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>                
+    </header>
+    <main>
+        <div id="comingSoon">
+            <h1><span>Responsivle Dev</span> is a 100% human hand coded blog. <br> Coming soon...</h1>
+        </div>
+    </main>
 </body>
 </html>

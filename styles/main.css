@@ -1,57 +1,22 @@
 :root{
     height: 100%;
-    --lightModeBgColor: #e6e7e8;
-    --lightModeTxtColor: #1c1c1c;
-    --lightModePrimaryColor: #4907AB;
-    background-color: var(--lightModeBgColor);
-    color: var(--lightModeTxtColor);
     font-family: "dejaVuSansMono", monospace;
 }
-body{
-    height: 100%;
-    margin: 0;
-}
-.bold{
-    font-weight: bold;
-}
-.italic{
-    font-style: italic;
-}
-.italicBold{
-    font-style: italic;
-    font-weight: bold;
-}div#comingSoon{
-    height: 100%;
-}
-#comingSoon{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-}
-h1{
-    text-align: center;
-}
-    span{
-        color: var(--lightModePrimaryColor);
+@media(prefers-color-scheme: light){
+    :root{
+        --lightModeBgColor: #e6e7e8;
+        --lightModeTxtColor: #1c1c1c;
+        --lightModePrimaryColor: #4907AB;
+        background-color: var(--lightModeBgColor);
+        color: var(--lightModeTxtColor);
     }
-a.italicBold{
-    color: #063C60;
+    header{border-bottom: 1px solid var(--lightModeTxtColor);}
+    span{color: var(--lightModePrimaryColor);}
+    a.italicBold{color: #063C60;}
+    a.italicBold:visited{color: #4907AB;}
+    a.italicBold:hover{text-decoration: none;}
+    .bar1,.bar2,.bar3{background-color: var(--lightModePrimaryColor);}
 }
-a.italicBold:visited{
-    color: #4907AB;
-}
-a.italicBold:hover{
-    text-decoration: none;
-}
-
-/* today im gonna work on the site design for mobile viewports first */
-
-header{
-    border-bottom: 1px solid #514806;
-    text-align: right;
-}
-
 @media (prefers-color-scheme: dark){
     :root{
         --lightModeBgColor: #1c1c1c;
@@ -60,18 +25,51 @@ header{
         background-color: var(--lightModeBgColor);
         color: var(--lightModeTxtColor);
     }
-    a.italicBold{
-        color: var(--darkModeprimaryColor);
-    }
-    a.italicBold:visited{
-        color: #BD94F9;
-    }
+    a.italicBold{color: var(--darkModeprimaryColor);}
+    a.italicBold:visited{color: #BD94F9;}
     header{
         color: var(--darkModeprimaryColor);
         border-bottom: 1px solid var(--darkModeprimaryColor);
         text-align: right;
     }
-    span{
-        color: var(--darkModeprimaryColor);
-    }
+    span{color: var(--darkModeprimaryColor);}
+    .bar1,.bar2,.bar3{background-color: var(--darkModeprimaryColor);}
 }
+body{
+    height: 100%;
+    margin: 0;
+}
+.bold{font-weight: bold;}
+.italic{font-style: italic;}
+.italicBold{
+    font-style: italic;
+    font-weight: bold;
+}
+h1{text-align: center;}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem;
+ }
+    div.menuContainer{
+        display: inline-block;
+        cursor: pointer;
+    }
+        .bar1, .bar2, .bar3{
+            width: 35px;
+            height: 5px;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .change .bar1{
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+        .change .bar2{
+            opacity: 0;
+        }
+        .change .bar3{
+            transform: translate(0, -11px) rotate(45deg);
+        }

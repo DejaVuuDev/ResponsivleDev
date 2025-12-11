@@ -1,0 +1,9 @@
+div#comingSoon{
+    height: 100%;
+}
+#comingSoon{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
