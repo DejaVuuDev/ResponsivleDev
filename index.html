@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/fonts/fonts.css">
     <link rel="stylesheet" href="/styles/comingSoon.css">
     <script src="src/js/main.js"></script>
+    <script src="src/js/contactForm.js"></script>
     <title>Responsivle Dev</title>
 </head>
 <body>
@@ -24,7 +25,21 @@
     </header>
     <main>
         <div id="comingSoon">
-            <h1><span>Responsivle Dev</span> is a 100% human hand coded blog. <br> Coming soon...</h1>
+            <h1><span>Responsivle Dev</span></h1>
+            <p>...is coming soon</p>
+        </div>
+        <section>
+            <p>Welcome to my lil corner of the web! My name is Deja and I'm a newbie self taught web developer and tech enthusiast.</p>
+            <p>On this blog you'll find my reflections on building responsible, accessible, and privacy respectful websites and open source apps. As well as notes from conferences I've been to, videos I watched, and other websites or apps I wanna talk about.</p>
+            <p>I'll also be sharing my mistakes, tools I've used, and occasional deep dives into the philosophy of being a Responsivle Techie.</p>
+        </section>
+        <div id="contactContainer">
+            <p>Interested in receiving updates?</p>
+            <form id="subscribeForm" method="post" action="placeholderFormSubmittedURL">
+                <input type="email" name="email" placeholder="you@example.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div id="result" class="msg" aria-live="polite"></div>
         </div>
     </main>
 </body>

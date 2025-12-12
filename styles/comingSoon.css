@@ -3,7 +3,9 @@ div#comingSoon{
 }
 #comingSoon{
     display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+main div#comingSoon{
+    border-bottom: 1px solid black;
 }

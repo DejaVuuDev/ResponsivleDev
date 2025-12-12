@@ -1,43 +1,40 @@
-:root{
+:root, body{
     height: 100%;
+    margin: 0;
     font-family: "dejaVuSansMono", monospace;
 }
 @media(prefers-color-scheme: light){
     :root{
-        --lightModeBgColor: #e6e7e8;
-        --lightModeTxtColor: #1c1c1c;
-        --lightModePrimaryColor: #4907AB;
-        background-color: var(--lightModeBgColor);
-        color: var(--lightModeTxtColor);
+        --alabasterGrey: #e6e7e8;
+        --carbonBlack: #1c1c1c;
+        --trueAzure: #4907AB;
+        background-color: var(--alabasterGrey);
+        color: var(--carbonBlack);
     }
-    header{border-bottom: 1px solid var(--lightModeTxtColor);}
-    span{color: var(--lightModePrimaryColor);}
+    header{border-bottom: 1px solid var(--carbonBlack);}
+    span{color: var(--trueAzure);}
     a.italicBold{color: #063C60;}
     a.italicBold:visited{color: #4907AB;}
     a.italicBold:hover{text-decoration: none;}
-    .bar1,.bar2,.bar3{background-color: var(--lightModePrimaryColor);}
+    .bar1,.bar2,.bar3{background-color: var(--trueAzure);}
 }
 @media (prefers-color-scheme: dark){
     :root{
-        --lightModeBgColor: #1c1c1c;
-        --lightModeTxtColor: #e6e7e8;
-        --darkModeprimaryColor: #e4d00a;
-        background-color: var(--lightModeBgColor);
-        color: var(--lightModeTxtColor);
+        --carbonBlack: #1c1c1c;
+        --alabasterGrey: #e6e7e8;
+        --goldenGlow: #e4d00a;
+        background-color: var(--carbonBlack);
+        color: var(--alabasterGrey);
     }
-    a.italicBold{color: var(--darkModeprimaryColor);}
+    a.italicBold{color: var(--goldenGlow);}
     a.italicBold:visited{color: #BD94F9;}
     header{
-        color: var(--darkModeprimaryColor);
-        border-bottom: 1px solid var(--darkModeprimaryColor);
+        color: var(--goldenGlow);
+        border-bottom: 1px solid var(--goldenGlow);
         text-align: right;
     }
-    span{color: var(--darkModeprimaryColor);}
-    .bar1,.bar2,.bar3{background-color: var(--darkModeprimaryColor);}
-}
-body{
-    height: 100%;
-    margin: 0;
+    span{color: var(--goldenGlow);}
+    .bar1,.bar2,.bar3{background-color: var(--goldenGlow);}
 }
 .bold{font-weight: bold;}
 .italic{font-style: italic;}
@@ -64,12 +61,6 @@ header{
             margin: 6px 0;
             transition: 0.4s;
         }
-        .change .bar1{
-            transform: translate(0, 11px) rotate(-45deg);
-        }
-        .change .bar2{
-            opacity: 0;
-        }
-        .change .bar3{
-            transform: translate(0, -11px) rotate(45deg);
-        }
+        .change .bar1{transform: translate(0, 11px) rotate(-45deg);}
+        .change .bar2{opacity: 0;}
+        .change .bar3{transform: translate(0, -11px) rotate(45deg);}
